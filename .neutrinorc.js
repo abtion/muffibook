@@ -42,7 +42,7 @@ module.exports = {
       testRegex: ".*test.(t|j)sx?$",
       testEnvironment: "jsdom",
       collectCoverageFrom: ["./**/*.{js,ts,tsx}", "!./**/*.d.ts"],
-      coveragePathIgnorePatterns: ["./*.js", "coverage"],
+      coveragePathIgnorePatterns: ["./*.js", "coverage", "stories"],
       transform: {
         "\\.(ts|tsx)$": "@neutrinojs/jest/src/transformer.js", // Compile ts and tsx files with babel (regular js files)
       },
