@@ -1,0 +1,25 @@
+.Modal {
+  @apply w-screen h-screen;
+  // @apply animated fadeIn faster;
+  @apply fixed left-0 top-0 flex justify-center items-center;
+  @apply inset-0 z-50 outline-none focus:outline-none;
+  @apply bg-no-repeat bg-center bg-cover;
+
+  &__outer {
+    @apply absolute bg-light opacity-80 inset-0 z-0;
+  }
+
+  &__inner {
+    @apply w-full py-2 px-3 relative mx-auto my-auto rounded-xl shadow-lg  bg-neutral-50;
+
+    &--sm {
+      @apply max-w-lg;
+    }
+    &--md {
+      @apply max-w-4xl;
+    }
+    &--lg {
+      @apply max-w-7xl;
+    }
+  }
+}
