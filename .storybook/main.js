@@ -1,6 +1,5 @@
-const custom = require("../webpack.config.js")
-
-console.log(custom.module.rules)
+const neutrino = require("neutrino")
+const custom = neutrino().webpack()
 
 module.exports = {
   stories: ["../stories/*stories*"],
@@ -8,6 +7,13 @@ module.exports = {
   webpackFinal: (config) => {
     return {
       ...config,
+      resolve: {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          ...custom.resolve.alias,
+        },
+      },
       module: { ...config.module, rules: custom.module.rules },
     }
   },
