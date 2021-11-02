@@ -3,7 +3,12 @@ const custom = neutrino().webpack()
 
 module.exports = {
   stories: ["../stories/*stories*"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@whitespace/storybook-addon-html",
+    "@storybook/addon-a11y",
+  ],
   webpackFinal: (config) => {
     return {
       ...config,
