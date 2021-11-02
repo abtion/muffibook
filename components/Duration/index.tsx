@@ -3,27 +3,29 @@ import { useState } from "react"
 import { Duration as LuxonDuration } from "luxon"
 import useInterval from "~/hooks/useInterval"
 
-const oneMinuteMs = 60000
+const oneSecondMs = 1000
+const oneMinuteMs = 60 * oneSecondMs
 
 const getDuration = (since: Date) => Date.now() - since.getTime()
 
 export default function Duration({
   since,
   format = "hh:mm",
-  upperLimit,
+  upperLimitMs,
 }: DurationProps): JSX.Element {
   const [duration, setDuration] = useState(getDuration(since))
+  const refreshRate = format.includes("s") ? oneSecondMs : oneMinuteMs
 
   useInterval(
     () => {
       setDuration(getDuration(since))
     },
-    oneMinuteMs,
+    refreshRate,
     [since]
   )
 
-  if (upperLimit && duration > upperLimit) {
-    return <>{LuxonDuration.fromMillis(upperLimit).toFormat(`> ${format}`)}</>
+  if (upperLimitMs && duration > upperLimitMs) {
+    return <>{LuxonDuration.fromMillis(upperLimitMs).toFormat(`> ${format}`)}</>
   }
 
   if (duration < 0) return <>00:00</>
@@ -34,5 +36,5 @@ export default function Duration({
 type DurationProps = {
   since: Date
   format?: string
-  upperLimit?: number
+  upperLimitMs?: number
 }
