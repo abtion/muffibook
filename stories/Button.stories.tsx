@@ -1,9 +1,9 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Button from "../components/Button"
-import Variants from "../const/variants"
-import Sizes from "../const/sizes"
+import Button from "~/components/Button"
+import Variants from "~/const/variants"
+import Sizes from "~/const/sizes"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {

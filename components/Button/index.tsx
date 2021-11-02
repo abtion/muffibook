@@ -1,7 +1,7 @@
 import React from "react"
 import classNames from "classnames"
-import Variants from "../../const/variants"
-import Sizes from "../../const/sizes"
+import Variants from "~/const/variants"
+import Sizes from "~/const/sizes"
 import "./index.scss"
 
 export interface ButtonProps
