@@ -18,14 +18,14 @@ export const Primary = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   variant: Variants.Primary,
-  children: "Button",
+  children: "Button text",
   size: Sizes.Medium,
 }
 
 export const Neutral = Template.bind({})
 Neutral.args = {
   variant: Variants.Neutral,
-  children: "Button",
+  children: "Button text",
   size: Sizes.Medium,
 }
 
@@ -33,12 +33,12 @@ export const Large = Template.bind({})
 Large.args = {
   variant: Variants.Primary,
   size: Sizes.Large,
-  children: "Button",
+  children: "Button text",
 }
 
 export const Small = Template.bind({})
 Small.args = {
   variant: Variants.Primary,
   size: Sizes.Small,
-  children: "Button",
+  children: "Button text",
 }
