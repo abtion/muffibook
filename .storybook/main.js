@@ -1,5 +1,11 @@
 const neutrino = require("neutrino")
 const custom = neutrino().webpack()
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+
+// Remove HtmlWebpackPlugin
+custom.plugins = custom.plugins.filter((plugin) => {
+  return !(plugin instanceof HtmlWebpackPlugin)
+})
 
 module.exports = {
   stories: ["../stories/*stories*"],
@@ -12,6 +18,10 @@ module.exports = {
   webpackFinal: (config) => {
     return {
       ...config,
+      output: {
+        ...config.output,
+        publicPath: "/",
+      },
       resolve: {
         ...config.resolve,
         alias: {
@@ -20,6 +30,7 @@ module.exports = {
         },
       },
       module: { ...config.module, rules: custom.module.rules },
+      plugins: [...custom.plugins, ...config.plugins],
     }
   },
 }
