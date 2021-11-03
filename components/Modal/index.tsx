@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { Route, Link } from "react-router-dom"
 import classNames from "classnames"
-import "./style.scss"
+import "./index.scss"
 import Sizes from "~/const/sizes"
 
 export default function Modal({
