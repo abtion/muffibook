@@ -1,7 +1,7 @@
 import React from "react"
 import "./index.scss"
 
-export default function ModalTop({ children }: ModalTopProps) {
+export default function ModalTop({ children }: ModalTopProps): JSX.Element {
   return (
     <div className="ModalTop">
       <div className="ModalTop__content">{children}</div>

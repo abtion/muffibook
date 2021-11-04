@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react"
-import { Route, Link } from "react-router-dom"
+import React from "react"
+import { Link } from "react-router-dom"
 import classNames from "classnames"
 import "./index.scss"
 import Sizes from "~/const/sizes"
@@ -9,7 +9,7 @@ export default function Modal({
   onClose,
   size,
   children,
-}: ModalProps) {
+}: ModalProps): JSX.Element {
   const innerModal = classNames("Modal__inner", {
     [`Modal__inner--${size}`]: size,
   })

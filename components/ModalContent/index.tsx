@@ -1,7 +1,9 @@
 import React from "react"
 import "./index.scss"
 
-export default function ModalContent({ children }: ModalContentProps) {
+export default function ModalContent({
+  children,
+}: ModalContentProps): JSX.Element {
   return <div className="ModalContent">{children}</div>
 }
 
