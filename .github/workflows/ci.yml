@@ -89,6 +89,8 @@ jobs:
       - prettier
       - jest
     if: success() && github.ref == 'refs/heads/main'
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: checkout repository
         uses: actions/checkout@v2.3.5
@@ -103,4 +105,4 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: deploy to github pages
-        run: yarn deploy --ci
+        run: yarn deploy
