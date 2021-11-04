@@ -103,4 +103,4 @@ jobs:
       - name: yarn
         run: yarn --frozen-lockfile
       - name: deploy to github pages
-        run: yarn deploy-storybook --ci
+        run: yarn deploy --ci
