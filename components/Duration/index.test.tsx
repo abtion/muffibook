@@ -49,10 +49,10 @@ describe(Duration, () => {
     describe("upperLimit", () => {
       it("sets an upper limit in ms", () => {
         const since = DateTime.now().minus({ hours: 2 }).toJSDate()
-        const upperLimit = 60 * 60 * 1000
+        const upperLimitMs = 60 * 60 * 1000
 
         const { getByText } = render(
-          <Duration since={since} format="mm:ss" upperLimit={upperLimit} />
+          <Duration since={since} format="mm:ss" upperLimitMs={upperLimitMs} />
         )
         expect(getByText("> 60:00")).toBeInTheDocument()
       })
