@@ -75,5 +75,10 @@
     "lint-eslint": "eslint .",
     "lint-prettier": "prettier . --check",
     "format": "prettier --write ."
+  },
+  "storybook-deployer": {
+    "gitUsername": "abtion-internal-projects",
+    "gitEmail": "internal-projects@abtion.com",
+    "commitMessage": "Deploy Storybook"
   }
 }
