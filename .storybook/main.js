@@ -20,7 +20,7 @@ module.exports = {
       ...config,
       output: {
         ...config.output,
-        publicPath: "/muffibook/",
+        publicPath: "/",
       },
       resolve: {
         ...config.resolve,
