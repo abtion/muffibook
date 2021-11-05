@@ -1,10 +1,13 @@
 const neutrino = require("neutrino")
 const custom = neutrino().webpack()
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 
 // Remove HtmlWebpackPlugin
 custom.plugins = custom.plugins.filter((plugin) => {
-  return !(plugin instanceof HtmlWebpackPlugin)
+  if (plugin instanceof HtmlWebpackPlugin) return false
+  if (plugin instanceof CleanWebpackPlugin) return false
+  return true
 })
 
 module.exports = {
