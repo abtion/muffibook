@@ -15,10 +15,18 @@ export default function Modal({
   })
 
   const renderCloseButton = () => {
-    const icon = <div className="Modal__inner-top-close">&#xff38;</div>
-
-    if (returnUrl) return <Link to={returnUrl}>{icon}</Link>
-    if (onClose) return <div onClick={onClose}>{icon}</div>
+    if (returnUrl)
+      return (
+        <Link className="Modal__close" to={returnUrl}>
+          &times;
+        </Link>
+      )
+    if (onClose)
+      return (
+        <div className="Modal__close" onClick={onClose}>
+          &times;
+        </div>
+      )
     return null
   }
 
@@ -26,10 +34,8 @@ export default function Modal({
     <div className="Modal">
       <div className="Modal__outer"></div>
       <div className={innerModal}>
-        <div className="">
-          {renderCloseButton()}
-          {children}
-        </div>
+        {renderCloseButton()}
+        {children}
       </div>
     </div>
   )
