@@ -8,6 +8,9 @@ module.exports = {
     "@whitespace/storybook-addon-html",
     "@storybook/addon-a11y",
   ],
+  core: {
+    builder: "webpack5",
+  },
   webpackFinal: (config) => {
     return {
       ...config,
@@ -28,7 +31,7 @@ module.exports = {
           // Add SVG support
           {
             test: /\.svg$/,
-            issuer: { test: /\.[tj]sx?$/ },
+            issuer: /\.[tj]sx?$/,
             use: [
               {
                 loader: "@svgr/webpack",

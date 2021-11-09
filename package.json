@@ -20,8 +20,7 @@
     "sass-loader": "^10.1.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.4.3",
-    "webpack": "^4.46.0",
-    "webpack-cli": "^3.3.12"
+    "webpack": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -30,6 +29,8 @@
     "@storybook/addon-essentials": "^6.3.12",
     "@storybook/addon-links": "^6.3.12",
     "@storybook/addon-storysource": "^6.3.12",
+    "@storybook/builder-webpack5": "^6.3.12",
+    "@storybook/manager-webpack5": "^6.3.12",
     "@storybook/react": "^6.3.12",
     "@storybook/storybook-deployer": "^2.8.10",
     "@testing-library/jest-dom": "^5.13.0",
@@ -58,8 +59,7 @@
     "jest": "^26.6.3",
     "prettier": "^2.3.1",
     "stylelint": "^13.0.0",
-    "stylelint-config-sass-guidelines": "^9.0.1",
-    "webpack-dev-server": "^3.11.2"
+    "stylelint-config-sass-guidelines": "^9.0.1"
   },
   "scripts": {
     "start": "start-storybook -p 6006",
