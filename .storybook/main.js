@@ -1,14 +1,4 @@
-const neutrino = require("neutrino")
-const custom = neutrino().webpack()
-const HtmlWebpackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
-
-// Remove HtmlWebpackPlugin
-custom.plugins = custom.plugins.filter((plugin) => {
-  if (plugin instanceof HtmlWebpackPlugin) return false
-  if (plugin instanceof CleanWebpackPlugin) return false
-  return true
-})
+const path = require("path")
 
 module.exports = {
   stories: ["../stories/*stories*"],
@@ -29,11 +19,44 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          ...custom.resolve.alias,
+          "~": path.resolve(__dirname, ".."),
         },
       },
-      module: { ...config.module, rules: custom.module.rules },
-      plugins: [...custom.plugins, ...config.plugins],
+      module: {
+        ...config.module,
+        rules: [
+          // Add SVG support
+          {
+            test: /\.svg$/,
+            issuer: { test: /\.[tj]sx?$/ },
+            use: [
+              {
+                loader: "@svgr/webpack",
+                options: { svgoConfig: { plugins: { removeViewBox: false } } },
+              },
+            ],
+          },
+          // Add sass support
+          {
+            test: /\.s?css$/,
+            use: [
+              "style-loader",
+              "css-loader",
+              {
+                loader: "postcss-loader",
+                options: {
+                  postcssOptions: {
+                    plugins: [require("tailwindcss"), require("autoprefixer")],
+                  },
+                },
+              },
+              "sass-loader",
+            ],
+          },
+          ...config.module.rules,
+        ],
+      },
+      plugins: [...config.plugins],
     }
   },
 }
