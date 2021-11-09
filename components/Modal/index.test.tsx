@@ -45,8 +45,8 @@ describe(Modal, () => {
         <Modal {...testData} returnUrl="/return/route" />
       )
 
-      const closeButton = container.querySelector(".Modal__inner-top-close")
-      expect(closeButton?.parentNode).toHaveAttribute("href", "/return/route")
+      const closeButton = container.querySelector(".Modal__close")
+      expect(closeButton).toHaveAttribute("href", "/return/route")
     })
 
     it("renders a callback function", () => {
@@ -55,7 +55,7 @@ describe(Modal, () => {
         <Modal {...testData} onClose={mockCallBack} />
       )
 
-      const closeButton = container.querySelector(".Modal__inner-top-close")
+      const closeButton = container.querySelector(".Modal__close")
 
       if (closeButton) userEvent.click(closeButton)
 
