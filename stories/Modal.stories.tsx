@@ -5,6 +5,9 @@ import Modal from "~/components/Modal"
 import ModalTop from "~/components/ModalTop"
 import ModalContent from "~/components/ModalContent"
 import Sizes from "~/const/sizes"
+import { Router } from "react-router"
+import { createMemoryHistory } from "history"
+import { action } from "@storybook/addon-actions"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,6 +17,7 @@ export default {
     docs: {
       inlineStories: false,
     },
+    actions: { argTypesRegex: null },
   },
 } as ComponentMeta<typeof Modal>
 
@@ -31,15 +35,29 @@ const Template: ComponentStory<typeof Modal> = (args) => {
   )
 }
 
-export const WithoutCloseButton = Template.bind({})
+export const WithCloseHandler = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-WithoutCloseButton.args = {
+WithCloseHandler.args = {
   ...baseProps,
+  onClose: action("onClose"),
 }
 
-export const WithCloseButton = Template.bind({})
+export const WithReturnUrl = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-WithCloseButton.args = {
+WithReturnUrl.args = {
   ...baseProps,
-  onClose: () => alert("Clicked"),
+  returnUrl: "url",
+}
+WithReturnUrl.decorators = [
+  (Story) => (
+    <Router history={createMemoryHistory()}>
+      <Story />
+    </Router>
+  ),
+]
+
+export const Unclosable = Template.bind({})
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+Unclosable.args = {
+  ...baseProps,
 }

@@ -26,6 +26,6 @@
   }
 
   &__close {
-    @apply text-2xl absolute px-3 py-2 right-0 top-0 cursor-pointer leading-none;
+    @apply text-current text-2xl absolute px-3 py-2 right-0 top-0 cursor-pointer leading-none;
   }
 }
