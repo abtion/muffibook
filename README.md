@@ -1,4 +1,4 @@
-Muffibook
+# Muffibook
 
 1. [Muffibook](#muffibook)
 2. [Using the components](#using-the-components)
