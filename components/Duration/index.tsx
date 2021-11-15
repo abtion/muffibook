@@ -8,6 +8,12 @@ const oneMinuteMs = 60 * oneSecondMs
 
 const getDuration = (since: Date) => Date.now() - since.getTime()
 
+export interface DurationProps {
+  since: Date
+  format?: string
+  upperLimitMs?: number
+}
+
 export default function Duration({
   since,
   format = "hh:mm",
@@ -31,10 +37,4 @@ export default function Duration({
   if (duration < 0) return <>00:00</>
 
   return <>{LuxonDuration.fromMillis(duration).toFormat(format)}</>
-}
-
-type DurationProps = {
-  since: Date
-  format?: string
-  upperLimitMs?: number
 }

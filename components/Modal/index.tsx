@@ -4,6 +4,31 @@ import classNames from "classnames"
 import "./index.scss"
 import Sizes from "~/const/sizes"
 
+interface BaseProps {
+  size: Sizes
+  children: React.ReactNode
+}
+
+interface ModalPropsWithoutCloseButton extends BaseProps {
+  onClose?: undefined
+  returnUrl?: undefined
+}
+
+interface ModalPropsWithReturnUrl extends BaseProps {
+  returnUrl: string
+  onClose?: undefined
+}
+
+interface ModalPropsWithCloseHandler extends BaseProps {
+  returnUrl?: undefined
+  onClose: () => void
+}
+
+type ModalProps =
+  | ModalPropsWithoutCloseButton
+  | ModalPropsWithReturnUrl
+  | ModalPropsWithCloseHandler
+
 export default function Modal({
   returnUrl,
   onClose,
@@ -40,28 +65,3 @@ export default function Modal({
     </div>
   )
 }
-
-type BaseProps = {
-  size: Sizes
-  children: React.ReactNode
-}
-
-interface ModalPropsWithoutReturnUrlOrCloseHandler extends BaseProps {
-  onClose?: undefined
-  returnUrl?: undefined
-}
-
-interface ModalPropsWithReturnUrl extends BaseProps {
-  returnUrl: string
-  onClose?: undefined
-}
-
-interface ModalPropsWithCloseHandler extends BaseProps {
-  returnUrl?: undefined
-  onClose: () => void
-}
-
-type ModalProps =
-  | ModalPropsWithoutReturnUrlOrCloseHandler
-  | ModalPropsWithReturnUrl
-  | ModalPropsWithCloseHandler
