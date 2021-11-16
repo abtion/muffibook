@@ -13,8 +13,32 @@ export default {
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
 
-export const Primary = Template.bind({})
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
+export const Info = Template.bind({})
+Info.args = {
+  variant: Variants.Info,
+  children: "Alert text",
+}
+
+export const Success = Template.bind({})
+Success.args = {
+  variant: Variants.Success,
+  children: "Alert text",
+}
+
+export const Warning = Template.bind({})
+Warning.args = {
+  variant: Variants.Warning,
+  children: "Alert text",
+}
+
+export const Danger = Template.bind({})
+Danger.args = {
+  variant: Variants.Danger,
+  children: "Alert text",
+}
+
+export const Primary = Template.bind({})
 Primary.args = {
   variant: Variants.Primary,
   children: "Alert text",
