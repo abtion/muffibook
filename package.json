@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/preset-typescript": "^7.15.0",
+    "@heroicons/react": "^1.0.5",
     "@svgr/webpack": "^5.5.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "autoprefixer": "^9",
