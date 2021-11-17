@@ -1,10 +1,5 @@
 .Alert {
-  @apply text-sm rounded-md px-5 py-4;
-
-  // Colors
-  &--neutral {
-    @apply text-neutral-800 bg-neutral-50;
-  }
+  @apply text-sm rounded-md px-4 py-4 flex;
 
   &--primary {
     @apply text-primary-800 bg-primary-50;
