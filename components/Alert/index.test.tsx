@@ -12,9 +12,9 @@ describe(Alert, () => {
   it("displays button text", () => {
     const { getByText } = render(<Alert {...defaultProps} />)
 
-    const button = getByText(defaultProps.children as string)
+    const element = getByText(defaultProps.children as string)
 
-    expect(button).toBeInTheDocument()
+    expect(element).toBeInTheDocument()
   })
 
   describe("when variant is set", () => {
@@ -23,9 +23,9 @@ describe(Alert, () => {
         <Alert {...defaultProps} variant={Variants.Primary} />
       )
 
-      const button = getByText(defaultProps.children as string)
+      const element = getByText(defaultProps.children as string)
 
-      expect(button).toHaveClass("Alert--primary")
+      expect(element).toHaveClass("Alert--primary")
     })
   })
 })
