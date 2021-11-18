@@ -22,6 +22,7 @@ const Template: ComponentStory<typeof Alert> = (args) => <Alert {...args} />
 export const Info = Template.bind({})
 Info.args = {
   variant: Variants.Info,
+  className: "flex",
   children: [
     <AlertIcon icon={InformationCircleIcon} variant={Variants.Info} key="" />,
     "Alert text",
@@ -31,6 +32,7 @@ Info.args = {
 export const Success = Template.bind({})
 Success.args = {
   variant: Variants.Success,
+  className: "flex",
   children: [
     <AlertIcon icon={CheckCircleIcon} variant={Variants.Success} key="" />,
     "Alert text",
@@ -40,6 +42,7 @@ Success.args = {
 export const Warning = Template.bind({})
 Warning.args = {
   variant: Variants.Warning,
+  className: "flex",
   children: [
     <AlertIcon icon={ExclamationIcon} variant={Variants.Warning} key="" />,
     "Alert text",
@@ -49,6 +52,7 @@ Warning.args = {
 export const Danger = Template.bind({})
 Danger.args = {
   variant: Variants.Danger,
+  className: "flex",
   children: [
     <AlertIcon icon={XCircleIcon} variant={Variants.Danger} key="" />,
     "Alert text",
@@ -65,4 +69,13 @@ export const Neutral = Template.bind({})
 Neutral.args = {
   variant: Variants.Neutral,
   children: "Alert text",
+}
+
+export const WithoutCloseHandler = Template.bind({})
+WithoutCloseHandler.args = {
+  variant: Variants.Warning,
+  children: "Alert text",
+}
+WithoutCloseHandler.parameters = {
+  actions: { argTypesRegex: null },
 }
