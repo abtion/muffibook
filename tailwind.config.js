@@ -19,7 +19,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: ["odd"],
+      backgroundColor: ["odd", "active"],
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
