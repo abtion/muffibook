@@ -1,6 +1,6 @@
 enum Variants {
-  Neutral = "neutral",
   Primary = "primary",
+  Neutral = "neutral",
   Success = "success",
   Danger = "danger",
   Warning = "warning",

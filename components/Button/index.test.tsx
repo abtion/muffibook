@@ -18,16 +18,6 @@ describe(Button, () => {
     expect(button).toBeInTheDocument()
   })
 
-  describe("outline = true", () => {
-    it("adds outline class", () => {
-      const { getByText } = render(<Button {...defaultProps} outline />)
-
-      const button = getByText(defaultProps.children as string)
-
-      expect(button).toHaveClass("Button--outline")
-    })
-  })
-
   describe("when size is set", () => {
     it("adds size class", () => {
       const { getByText } = render(
