@@ -2,7 +2,7 @@ import React from "react"
 import { render } from "@testing-library/react"
 import InformationCircleIcon from "@heroicons/react/solid/InformationCircleIcon"
 
-import Variants from "../../const/variants"
+import Variant from "~/const/variant"
 import AlertIcon from "."
 
 const defaultProps = {
@@ -21,7 +21,7 @@ describe(AlertIcon, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { container } = render(
-        <AlertIcon {...defaultProps} variant={Variants.Primary} />
+        <AlertIcon {...defaultProps} variant={Variant.Primary} />
       )
 
       const element = container.querySelector("svg")

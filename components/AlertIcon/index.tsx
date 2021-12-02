@@ -1,10 +1,10 @@
 import React from "react"
 import classNames from "classnames"
-import Variants from "~/const/variants"
+import Variant from "~/const/variant"
 import "./index.scss"
 
 export interface AlertProps extends React.HTMLAttributes<SVGElement> {
-  variant?: Variants
+  variant?: Variant
   icon: (props: React.HTMLAttributes<SVGElement>) => JSX.Element
 }
 

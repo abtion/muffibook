@@ -1,13 +1,13 @@
 import React from "react"
 import classNames from "classnames"
-import Variants from "../../const/variants"
+import Variant from "../../const/variant"
 import Sizes from "../../const/sizes"
 import "./index.scss"
 
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
   size?: Sizes
-  variant?: Variants
+  variant?: Variant
 }
 
 export default function Input(props: InputProps): JSX.Element {

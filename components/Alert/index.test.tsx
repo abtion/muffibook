@@ -1,6 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Variants from "../../const/variants"
+import Variant from "~/const/variant"
 
 import Alert, { AlertProps } from "."
 import userEvent from "@testing-library/user-event"
@@ -21,7 +21,7 @@ describe(Alert, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByText } = render(
-        <Alert {...defaultProps} variant={Variants.Primary} />
+        <Alert {...defaultProps} variant={Variant.Primary} />
       )
 
       const element = getByText(defaultProps.children as string)
@@ -37,7 +37,7 @@ describe(Alert, () => {
         <Alert
           {...defaultProps}
           onClose={closeHandler}
-          variant={Variants.Primary}
+          variant={Variant.Primary}
         />
       )
 

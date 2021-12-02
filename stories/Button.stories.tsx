@@ -2,7 +2,7 @@ import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
 import Button from "~/components/Button"
-import Variants from "~/const/variants"
+import Variant from "~/const/variant"
 import Sizes from "~/const/sizes"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -24,35 +24,35 @@ const sharedProps = {
 export const Primary = Template.bind({})
 Primary.args = {
   ...sharedProps,
-  variant: Variants.Primary,
+  variant: Variant.Primary,
 }
 
 export const Neutral = Template.bind({})
 Neutral.args = {
   ...sharedProps,
-  variant: Variants.Neutral,
+  variant: Variant.Neutral,
 }
 
 export const Success = Template.bind({})
 Success.args = {
   ...sharedProps,
-  variant: Variants.Success,
+  variant: Variant.Success,
 }
 
 export const Danger = Template.bind({})
 Danger.args = {
   ...sharedProps,
-  variant: Variants.Danger,
+  variant: Variant.Danger,
 }
 
 export const Warning = Template.bind({})
 Warning.args = {
   ...sharedProps,
-  variant: Variants.Warning,
+  variant: Variant.Warning,
 }
 
 export const Info = Template.bind({})
 Info.args = {
   ...sharedProps,
-  variant: Variants.Info,
+  variant: Variant.Info,
 }

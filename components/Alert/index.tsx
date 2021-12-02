@@ -1,11 +1,11 @@
 import React from "react"
 import classNames from "classnames"
-import Variants from "~/const/variants"
+import Variant from "~/const/variant"
 import "./index.scss"
 import XIcon from "@heroicons/react/solid/XIcon"
 
 export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
-  variant?: Variants
+  variant?: Variant
   onClose?: () => void
 }
 
