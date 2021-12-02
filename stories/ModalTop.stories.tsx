@@ -1,9 +1,8 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Modal from "~/components/Modal"
+import Modal, { ModalSize } from "~/components/Modal"
 import ModalTop from "~/components/ModalTop"
-import Sizes from "~/const/sizes"
 import ModalContent from "~/components/ModalContent"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -19,7 +18,7 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Modal> = (args) => (
-  <Modal size={Sizes.Medium}>
+  <Modal size={ModalSize.Medium}>
     <ModalTop {...args} />
     <ModalContent>Content</ModalContent>
   </Modal>

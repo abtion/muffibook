@@ -1,19 +1,18 @@
 import React from "react"
 import renderWithRouteHistory from "~/utils/renderWithRouterHistory"
 import userEvent from "@testing-library/user-event"
-import Modal from "."
-import Sizes from "~/const/sizes"
+import Modal, { ModalSize } from "."
 
 describe(Modal, () => {
   const testData = {
-    size: Sizes.Medium,
+    size: ModalSize.Medium,
     children: <div>content</div>,
   }
 
   describe("size", () => {
     it("sets the size as small", () => {
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} size={Sizes.Small} />
+        <Modal {...testData} size={ModalSize.Small} />
       )
 
       const modalInner = container.querySelector(".Modal__inner--sm")
@@ -22,7 +21,7 @@ describe(Modal, () => {
 
     it("sets the size as medium", () => {
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} size={Sizes.Medium} />
+        <Modal {...testData} size={ModalSize.Medium} />
       )
 
       const modalInner = container.querySelector(".Modal__inner--md")
@@ -31,7 +30,7 @@ describe(Modal, () => {
 
     it("sets the size as large", () => {
       const { container } = renderWithRouteHistory(
-        <Modal {...testData} size={Sizes.Large} />
+        <Modal {...testData} size={ModalSize.Large} />
       )
 
       const modalInner = container.querySelector(".Modal__inner--lg")

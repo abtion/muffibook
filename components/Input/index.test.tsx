@@ -1,7 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Input, { InputProps } from "."
-import Sizes from "../../const/sizes"
+import Input, { InputProps, InputSize } from "."
 import Variant from "~/const/variant"
 
 const defaultProps: InputProps = {
@@ -20,7 +19,7 @@ describe(Input, () => {
   describe("when size is set", () => {
     it("adds size class", () => {
       const { getByPlaceholderText } = render(
-        <Input {...defaultProps} size={Sizes.Medium} />
+        <Input {...defaultProps} size={InputSize.Medium} />
       )
 
       const input = getByPlaceholderText(defaultProps.placeholder as string)

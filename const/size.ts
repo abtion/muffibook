@@ -1,4 +1,4 @@
-enum Sizes {
+enum Size {
   ExtraSmall = "xs",
   Small = "sm",
   Medium = "md",
@@ -6,4 +6,4 @@ enum Sizes {
   ExtraLarge = "xl",
 }
 
-export default Sizes
+export default Size
