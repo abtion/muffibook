@@ -13,6 +13,8 @@ module.exports = {
     },
     colors: {
       transparent: "transparent",
+      white: "white",
+      black: "black",
       current: "currentColor",
       ...tailwindConfig,
     },

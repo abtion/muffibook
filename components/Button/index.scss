@@ -51,5 +51,10 @@
     &.Button--info {
       @apply text-info-600-contrast bg-info-600 hover:bg-info-700 active:bg-info-800;
     }
+
+    // Non-global variants
+    &.Button--basic {
+      @apply text-neutral-700 bg-white border border-neutral-300 hover:bg-info-700 active:bg-info-800;
+    }
   }
 }

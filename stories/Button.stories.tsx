@@ -55,3 +55,9 @@ Info.args = {
   ...sharedProps,
   variant: Variant.Info,
 }
+
+export const Basic = Template.bind({})
+Basic.args = {
+  ...sharedProps,
+  variant: "basic",
+}
