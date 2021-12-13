@@ -1,13 +1,12 @@
 import React from "react"
 import classNames from "classnames"
 import Variant from "../../const/variant"
-import Size from "~/const/size"
 import "./index.scss"
 
 export enum InputSize {
-  Small = Size.Small,
-  Medium = Size.Medium,
-  Large = Size.Large,
+  Small = "sm",
+  Medium = "md",
+  Large = "lg",
 }
 
 export interface InputProps

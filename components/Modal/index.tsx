@@ -2,12 +2,11 @@ import React from "react"
 import { Link } from "react-router-dom"
 import classNames from "classnames"
 import "./index.scss"
-import Size from "~/const/size"
 
 export enum ModalSize {
-  Small = Size.Small,
-  Medium = Size.Medium,
-  Large = Size.Large,
+  Small = "sm",
+  Medium = "md",
+  Large = "lg",
 }
 
 interface BaseProps {
