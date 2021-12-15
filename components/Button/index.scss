@@ -23,7 +23,7 @@
   }
 
   &:disabled {
-    @apply text-neutral-400 bg-neutral-100;
+    @apply text-neutral-400 bg-neutral-100 cursor-not-allowed;
   }
 
   // Colors
