@@ -56,5 +56,9 @@
     &.Button--basic {
       @apply text-neutral-700 bg-white border border-neutral-300 hover:bg-neutral-50 active:bg-neutral-100;
     }
+
+    &.Button--secondary {
+      @apply text-primary-700 bg-primary-100 hover:bg-primary-200 active:bg-primary-300;
+    }
   }
 }

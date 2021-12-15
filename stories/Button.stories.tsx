@@ -26,6 +26,12 @@ Primary.args = {
   variant: Variant.Primary,
 }
 
+export const Secondary = Template.bind({})
+Secondary.args = {
+  ...sharedProps,
+  variant: "secondary",
+}
+
 export const Neutral = Template.bind({})
 Neutral.args = {
   ...sharedProps,

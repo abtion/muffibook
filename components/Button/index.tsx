@@ -3,7 +3,7 @@ import classNames from "classnames"
 import Variant from "~/const/variant"
 import "./index.scss"
 
-export type ButtonVariant = Variant | "basic"
+export type ButtonVariant = Variant | "basic" | "secondary"
 
 export enum ButtonSize {
   ExtraSmall = "xs",
