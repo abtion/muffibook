@@ -26,39 +26,43 @@
     @apply text-neutral-400 bg-neutral-100 cursor-not-allowed;
   }
 
+  &:focus {
+    @apply ring-2 ring-offset-2;
+  }
+
   // Colors
   &:enabled {
     &.Button--neutral {
-      @apply text-neutral-600-contrast bg-neutral-600 hover:bg-neutral-700 active:bg-neutral-800;
+      @apply text-neutral-600-contrast bg-neutral-600 hover:bg-neutral-700 active:bg-neutral-800 ring-neutral-600;
     }
 
     &.Button--primary {
-      @apply text-primary-600-contrast bg-primary-600 hover:bg-primary-700 active:bg-primary-800;
+      @apply text-primary-600-contrast bg-primary-600 hover:bg-primary-700 active:bg-primary-800 ring-primary-600;
     }
 
     &.Button--success {
-      @apply text-success-600-contrast bg-success-600 hover:bg-success-700 active:bg-success-800;
+      @apply text-success-600-contrast bg-success-600 hover:bg-success-700 active:bg-success-800 ring-success-600;
     }
 
     &.Button--danger {
-      @apply text-danger-600-contrast bg-danger-600 hover:bg-danger-700 active:bg-danger-800;
+      @apply text-danger-600-contrast bg-danger-600 hover:bg-danger-700 active:bg-danger-800 ring-danger-600;
     }
 
     &.Button--warning {
-      @apply text-warning-600-contrast bg-warning-600 hover:bg-warning-700 active:bg-warning-800;
+      @apply text-warning-600-contrast bg-warning-600 hover:bg-warning-700 active:bg-warning-800 ring-warning-600;
     }
 
     &.Button--info {
-      @apply text-info-600-contrast bg-info-600 hover:bg-info-700 active:bg-info-800;
+      @apply text-info-600-contrast bg-info-600 hover:bg-info-700 active:bg-info-800 ring-info-600;
     }
 
     // Non-global variants
     &.Button--basic {
-      @apply text-neutral-700 bg-white border border-neutral-300 hover:bg-neutral-50 active:bg-neutral-100;
+      @apply text-neutral-700 bg-white border border-neutral-300 hover:bg-neutral-50 active:bg-neutral-100 ring-primary-600;
     }
 
     &.Button--secondary {
-      @apply text-primary-700 bg-primary-100 hover:bg-primary-200 active:bg-primary-300;
+      @apply text-primary-700 bg-primary-100 hover:bg-primary-200 active:bg-primary-300 ring-primary-600;
     }
   }
 }
