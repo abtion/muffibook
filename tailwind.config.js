@@ -22,6 +22,7 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ["odd", "active"],
+      boxShadow: ["active"],
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
