@@ -33,27 +33,27 @@
   // Colors
   &:enabled {
     &.Button--neutral {
-      @apply text-neutral-600-contrast bg-neutral-600 hover:bg-neutral-700 active:bg-neutral-800 ring-neutral-600;
+      @apply text-neutral-600-contrast bg-neutral-500 hover:bg-neutral-600 active:bg-neutral-700 ring-neutral-500;
     }
 
     &.Button--primary {
-      @apply text-primary-600-contrast bg-primary-600 hover:bg-primary-700 active:bg-primary-800 ring-primary-600;
+      @apply text-primary-600-contrast bg-primary-500 hover:bg-primary-600 active:bg-primary-700 ring-primary-500;
     }
 
     &.Button--success {
-      @apply text-success-600-contrast bg-success-600 hover:bg-success-700 active:bg-success-800 ring-success-600;
+      @apply text-success-600-contrast bg-success-500 hover:bg-success-600 active:bg-success-700 ring-success-500;
     }
 
     &.Button--danger {
-      @apply text-danger-600-contrast bg-danger-600 hover:bg-danger-700 active:bg-danger-800 ring-danger-600;
+      @apply text-danger-600-contrast bg-danger-500 hover:bg-danger-600 active:bg-danger-700 ring-danger-500;
     }
 
     &.Button--warning {
-      @apply text-warning-600-contrast bg-warning-600 hover:bg-warning-700 active:bg-warning-800 ring-warning-600;
+      @apply text-warning-600-contrast bg-warning-500 hover:bg-warning-600 active:bg-warning-700 ring-warning-500;
     }
 
     &.Button--info {
-      @apply text-info-600-contrast bg-info-600 hover:bg-info-700 active:bg-info-800 ring-info-600;
+      @apply text-info-600-contrast bg-info-500 hover:bg-info-600 active:bg-info-700 ring-info-500;
     }
 
     // Non-global variants
