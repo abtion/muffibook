@@ -5,7 +5,7 @@ import Duration from "~/components/Duration"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Duration",
+  title: "Example/✅ Duration",
   component: Duration,
 } as ComponentMeta<typeof Duration>
 

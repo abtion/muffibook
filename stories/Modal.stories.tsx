@@ -10,7 +10,7 @@ import { action } from "@storybook/addon-actions"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Modal",
+  title: "Example/🔎 Modal",
   component: Modal,
   parameters: {
     docs: {

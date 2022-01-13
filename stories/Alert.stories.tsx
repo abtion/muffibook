@@ -11,7 +11,7 @@ import Variant from "~/const/variant"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Alert",
+  title: "Example/✅ Alert",
   component: Alert,
 } as ComponentMeta<typeof Alert>
 
