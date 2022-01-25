@@ -2,12 +2,14 @@
 
 1. [Muffibook](#muffibook)
 2. [Using the components](#using-the-components)
-3. [Why not an NPM package?](#why-not-an-npm-package)
-4. [Developing](#developing)
+   1. [Why not an NPM package?](#why-not-an-npm-package)
+3. [Developing](#developing)
    1. [Requirements](#requirements)
    2. [First time setup](#first-time-setup)
    3. [Day-to-day](#day-to-day)
-5. [Deployments](#deployments)
+   4. [Adding components](#adding-components)
+4. [Deployments](#deployments)
+5. [How to contribute](#how-to-contribute)
 
 The Abtion way of reusing UI across projects.
 
@@ -56,7 +58,25 @@ You must have the following installed and available on your machine:
 - Run the server: `yarn start` and [http://localhost:6006](http://localhost:6006)
 - Run tests: `yarn test`
 - Run frontend linters: `yarn lint`
+- Run tests with coverage: `yarn test --coverage`
 
-## Deployments
+## Adding components
+
+1. Add your component to the `components` folder (follow the file naming conventions of the existing components)
+2. Add a story for the component (use the existing `stories` as a reference), prefix the story with 🔎.
+
+# Deployments
 
 When CI passes main is deployed to [muffibook.abtion.com](https://muffibook.abtion.com).
+
+# How to contribute
+
+All abtioneers have write access to the repo.
+
+To contribute get the project running locally and add your component (see [developing](#developing)).
+
+When your component is ready:
+
+1. Run linters and ensure coverage is still 100%: `yarn lint`, `yarn test --coverage`
+2. Push to main
+3. The component will show up on muffibook.abtion.com after a couple of minutes.
