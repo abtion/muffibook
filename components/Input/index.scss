@@ -1,17 +1,25 @@
 .Input {
-  @apply border-2 border-transparent text-base rounded-md leading-4 focus:ring-1 focus:outline-none;
+  @apply border border-transparent text-base rounded-md leading-4 focus:ring-1 focus:outline-none;
 
   // Sizes
+  &--xs {
+    @apply px-2.5 py-1 text-xs;
+  }
+
   &--sm {
-    @apply px-1 py-1 text-sm xl:py-2 xl:px-2 xl:text-base;
+    @apply px-3 py-1.5 text-sm;
   }
 
   &--md {
-    @apply px-2 py-2 text-base xl:px-3 xl:py-3 xl:text-lg;
+    @apply px-5 py-2 text-sm;
   }
 
   &--lg {
-    @apply px-3 py-3 text-lg xl:py-4 xl:px-4 xl:text-xl;
+    @apply px-5 py-2 text-base;
+  }
+
+  &--xl {
+    @apply px-6 py-3 text-base;
   }
 
   // Colors

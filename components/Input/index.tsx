@@ -4,9 +4,11 @@ import Variant from "../../const/variant"
 import "./index.scss"
 
 export enum InputSize {
+  ExtraSmall = "xs",
   Small = "sm",
   Medium = "md",
   Large = "lg",
+  ExtraLarge = "xl",
 }
 
 export interface InputProps
