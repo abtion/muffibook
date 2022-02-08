@@ -1,5 +1,5 @@
 .Input {
-  @apply border border-transparent text-base rounded-md leading-4 focus:ring-1 focus:outline-none;
+  @apply border border-transparent text-base rounded-md leading-4 focus:ring-1 focus:outline-none shadow-sm;
 
   // Sizes
   &--xs {
@@ -22,28 +22,12 @@
     @apply px-6 py-3 text-base;
   }
 
-  // Colors
-  &--neutral {
-    @apply border-neutral-300 focus:ring-neutral-300 focus:border-neutral-300;
+  // Variants
+  &--default {
+    @apply border-neutral-300 focus:ring-primary-400 focus:border-primary-400;
   }
 
-  &--primary {
-    @apply border-primary-300 focus:ring-primary-300 focus:border-primary-300;
-  }
-
-  &--success {
-    @apply border-success-300 focus:ring-success-300 focus:border-success-300;
-  }
-
-  &--danger {
-    @apply border-danger-300 focus:ring-danger-300 focus:border-danger-300;
-  }
-
-  &--warning {
-    @apply border-warning-300 focus:ring-warning-300 focus:border-warning-300;
-  }
-
-  &--info {
-    @apply border-info-300 focus:ring-info-300 focus:border-info-300;
+  &--error {
+    @apply border-danger-500 focus:ring-danger-400 focus:border-danger-400;
   }
 }

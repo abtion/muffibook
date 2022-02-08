@@ -1,7 +1,6 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import Input, { InputProps, InputSize } from "."
-import Variant from "~/const/variant"
+import Input, { InputProps, InputSize, InputVariant } from "."
 
 const defaultProps: InputProps = {
   placeholder: "Input placeholder",
@@ -31,12 +30,12 @@ describe(Input, () => {
   describe("when variant is set", () => {
     it("adds variant class", () => {
       const { getByPlaceholderText } = render(
-        <Input {...defaultProps} variant={Variant.Primary} />
+        <Input {...defaultProps} variant={InputVariant.Default} />
       )
 
       const input = getByPlaceholderText(defaultProps.placeholder as string)
 
-      expect(input).toHaveClass("Input--primary")
+      expect(input).toHaveClass("Input--default")
     })
   })
 })
