@@ -5,7 +5,7 @@ import Input, { InputSize, InputVariant } from "~/components/Input"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/🚧 Input",
+  title: "Components/🚧 Input",
   component: Input,
 } as ComponentMeta<typeof Input>
 

@@ -6,7 +6,7 @@ import Variant from "~/const/variant"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/✅ ButtonClear",
+  title: "Components/✅ ButtonClear",
   component: ButtonClear,
 } as ComponentMeta<typeof ButtonClear>
 

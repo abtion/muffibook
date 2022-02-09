@@ -7,7 +7,7 @@ import ModalTop from "~/components/ModalTop"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/🔎 ModalContent",
+  title: "Components/🔎 ModalContent",
   component: ModalContent,
   parameters: {
     docs: {
