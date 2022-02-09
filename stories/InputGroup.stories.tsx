@@ -9,7 +9,7 @@ export default {
   title: "Examples/InputGroup",
 }
 
-export const InputGroup = () => (
+export const InputGroup = (): JSX.Element => (
   <div className="flex">
     <Input
       variant={InputVariant.Default}
