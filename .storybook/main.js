@@ -14,6 +14,13 @@ module.exports = {
   webpackFinal: (config) => {
     return {
       ...config,
+      entry: [
+        ...config.entry,
+
+        // Load fonts and tailwind classes AFTER component styling
+        // This allows overriding default component styling using tailwind
+        "./main.scss",
+      ],
       output: {
         ...config.output,
         publicPath: "/",
