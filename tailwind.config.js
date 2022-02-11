@@ -4,7 +4,11 @@ const prepareColorVariables = require("./utils/prepareColorVariables")
 const tailwindConfig = prepareColorVariables(colors).tailwindConfig
 
 module.exports = {
-  purge: ["./components/**/*.{js,jsx,ts,tsx,scss,css}", "./public/index.ejs"],
+  purge: [
+    "./components/**/*.{js,jsx,ts,tsx,scss,css}",
+    "./stories/**/*.tsx",
+    "./public/index.ejs",
+  ],
   darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
