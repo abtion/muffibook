@@ -1,4 +1,0 @@
-plugins:
-  duplication:
-    exclude_patterns:
-      - "**/*.test.{js,ts,jsx,tsx}"
