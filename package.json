@@ -21,7 +21,7 @@
     "sass-loader": "^12.3.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "typescript": "^4.4.3",
-    "webpack": "^5.0.0"
+    "webpack": "^5.70.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
