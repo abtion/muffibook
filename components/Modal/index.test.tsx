@@ -2,6 +2,7 @@ import React from "react"
 import renderWithRouteHistory from "~/utils/renderWithRouterHistory"
 import userEvent from "@testing-library/user-event"
 import Modal, { ModalSize } from "."
+import { waitFor } from "@testing-library/react"
 
 describe(Modal, () => {
   const testData = {
@@ -48,7 +49,7 @@ describe(Modal, () => {
       expect(closeButton).toHaveAttribute("href", "/return/route")
     })
 
-    it("renders a callback function", () => {
+    it("renders a callback function", async () => {
       const mockCallBack = jest.fn()
       const { container } = renderWithRouteHistory(
         <Modal {...testData} onClose={mockCallBack} />
@@ -58,7 +59,7 @@ describe(Modal, () => {
 
       if (closeButton) userEvent.click(closeButton)
 
-      expect(mockCallBack.mock.calls.length).toEqual(1)
+      await waitFor(() => expect(mockCallBack.mock.calls.length).toEqual(1))
     })
   })
 
