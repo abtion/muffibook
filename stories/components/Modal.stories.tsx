@@ -5,6 +5,7 @@ import Modal, { ModalSize } from "~/components/Modal"
 import ModalTop from "~/components/ModalTop"
 import ModalContent from "~/components/ModalContent"
 import { Router } from "react-router"
+import { Routes, Route } from "react-router-dom"
 import { createMemoryHistory } from "history"
 import { action } from "@storybook/addon-actions"
 
@@ -48,11 +49,17 @@ WithReturnUrl.args = {
   returnUrl: "url",
 }
 WithReturnUrl.decorators = [
-  (Story) => (
-    <Router history={createMemoryHistory()}>
-      <Story />
-    </Router>
-  ),
+  (Story) => {
+    const history = createMemoryHistory()
+
+    return (
+      <Router navigator={history} location={history.location}>
+        <Routes>
+          <Route path="/*" element={<Story />} />
+        </Routes>
+      </Router>
+    )
+  },
 ]
 
 export const Unclosable = Template.bind({})
