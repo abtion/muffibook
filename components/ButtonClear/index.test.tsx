@@ -1,8 +1,9 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import Variant from "~/const/variant"
+import Size from "~/const/size"
 
-import ButtonClear, { ButtonClearProps, ButtonClearSize } from "."
+import ButtonClear, { ButtonClearProps } from "."
 
 const defaultProps: ButtonClearProps = {
   children: "ButtonClear text",
@@ -20,7 +21,7 @@ describe(ButtonClear, () => {
   describe("when size is set", () => {
     it("adds size class", () => {
       const { getByText } = render(
-        <ButtonClear {...defaultProps} size={ButtonClearSize.Medium} />
+        <ButtonClear {...defaultProps} size={Size.Medium} />
       )
 
       const button = getByText(defaultProps.children as string)

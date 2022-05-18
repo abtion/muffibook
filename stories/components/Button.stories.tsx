@@ -1,8 +1,9 @@
 import React from "react"
 import { ComponentStory, ComponentMeta } from "@storybook/react"
 
-import Button, { ButtonSize } from "~/components/Button"
+import Button from "~/components/Button"
 import Variant from "~/const/variant"
+import Size from "~/const/size"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -15,7 +16,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
 const sharedProps = {
   children: "Button text",
-  size: ButtonSize.Medium,
+  size: Size.Medium,
   disabled: false,
 }
 

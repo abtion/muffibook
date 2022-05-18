@@ -1,9 +1,10 @@
 import React from "react"
 import MailIcon from "@heroicons/react/solid/MailIcon"
 
-import Input, { InputSize, InputVariant } from "~/components/Input"
-import Button, { ButtonSize } from "~/components/Button"
+import Input, { InputVariant } from "~/components/Input"
+import Button from "~/components/Button"
 import Variant from "~/const/variant"
+import Size from "~/const/size"
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -14,13 +15,13 @@ export const CombinedInputAndButton = (): JSX.Element => (
   <div className="flex">
     <Input
       variant={InputVariant.Default}
-      size={InputSize.Medium}
+      size={Size.Medium}
       className="rounded-l-md"
       placeholder="Type here"
     />
     <Button
       variant={Variant.Primary}
-      size={ButtonSize.Medium}
+      size={Size.Medium}
       className="rounded-r-md -ml-px"
     >
       Submit
@@ -35,7 +36,7 @@ export const InputWithIcon = (): JSX.Element => (
     </div>
     <Input
       variant={InputVariant.Default}
-      size={InputSize.Medium}
+      size={Size.Medium}
       className="pl-10"
       placeholder="Type here"
     />

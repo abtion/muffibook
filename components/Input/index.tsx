@@ -1,14 +1,7 @@
 import React from "react"
 import classNames from "classnames"
+import Size from "~/const/size"
 import "./index.scss"
-
-export enum InputSize {
-  ExtraSmall = "xs",
-  Small = "sm",
-  Medium = "md",
-  Large = "lg",
-  ExtraLarge = "xl",
-}
 
 export enum InputVariant {
   Default = "default",
@@ -17,7 +10,7 @@ export enum InputVariant {
 
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
-  size?: InputSize
+  size?: Size
   variant?: InputVariant
 }
 

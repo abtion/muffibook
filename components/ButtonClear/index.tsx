@@ -1,20 +1,13 @@
 import React from "react"
 import classNames from "classnames"
 import Variant from "~/const/variant"
+import Size from "~/const/size"
 import "./index.scss"
-
-export enum ButtonClearSize {
-  ExtraSmall = "xs",
-  Small = "sm",
-  Medium = "md",
-  Large = "lg",
-  ExtraLarge = "xl",
-}
 
 export interface ButtonClearProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  size?: ButtonClearSize
-  variant?: Variant
+  size?: Size
+  variant?: Variant | "basic" | "secondary"
 }
 
 export default function ButtonClear(props: ButtonClearProps): JSX.Element {
