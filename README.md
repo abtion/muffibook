@@ -1,3 +1,5 @@
+![Muffi Book](muffi-book.gif)
+
 # Muffibook
 
 1. [Muffibook](#muffibook)
