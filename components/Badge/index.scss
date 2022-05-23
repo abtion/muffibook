@@ -1,0 +1,39 @@
+.Badge {
+  @apply flex mr-3 w-max rounded-full;
+
+  // Colors
+  &--neutral {
+    @apply text-neutral-800 bg-neutral-200;
+  }
+
+  &--primary {
+    @apply text-primary-800 bg-primary-100;
+  }
+
+  &--success {
+    @apply text-success-800 bg-success-100;
+  }
+
+  &--danger {
+    @apply text-danger-800 bg-danger-100;
+  }
+
+  &--warning {
+    @apply text-warning-800 bg-warning-100;
+  }
+
+  &--info {
+    @apply text-info-800 bg-info-100;
+  }
+
+  // Sizes
+  &--sm {
+    @apply text-xs;
+    padding: 2px 10px;
+  }
+
+  &--lg {
+    @apply text-sm;
+    padding: 2px 12px;
+  }
+}
