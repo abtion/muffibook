@@ -23,13 +23,17 @@ export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
 }
 
 export default function Link(props: LinkProps): JSX.Element {
-  const { underline, size, variant, text, ...rest } = props
+  const { underline, size, variant, className, text, ...rest } = props
 
-  const usedClassName = classNames("Link", {
-    [`Link--${variant}`]: variant,
-    [`Link--${size}`]: size,
-    [`Link--underline`]: underline,
-  })
+  const usedClassName = classNames(
+    "Link",
+    {
+      [`Link--${variant}`]: variant,
+      [`Link--${size}`]: size,
+      [`Link--underline`]: underline,
+    },
+    className
+  )
 
   return (
     <a className={usedClassName} {...rest}>
