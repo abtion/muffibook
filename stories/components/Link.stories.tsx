@@ -21,7 +21,6 @@ const sharedProps = {
 export const Info = Template.bind({})
 Info.args = {
   ...sharedProps,
-  variant: LinkVariant.Info,
 }
 
 export const Neutral = Template.bind({})
