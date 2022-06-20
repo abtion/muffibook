@@ -40,3 +40,9 @@ NeutralDark.args = {
   ...sharedProps,
   variant: LinkVariant.NeutralDark,
 }
+
+export const Underline = Template.bind({})
+Underline.args = {
+  ...sharedProps,
+  underline: true,
+}
