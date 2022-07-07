@@ -4,12 +4,11 @@ const prepareColorVariables = require("./utils/prepareColorVariables")
 const tailwindConfig = prepareColorVariables(colors).tailwindConfig
 
 module.exports = {
-  purge: [
+  content: [
     "./components/**/*.{js,jsx,ts,tsx,scss,css}",
     "./stories/**/*.tsx",
     "./public/index.ejs",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     container: {
       center: true,
@@ -21,12 +20,6 @@ module.exports = {
       black: "black",
       current: "currentColor",
       ...tailwindConfig,
-    },
-  },
-  variants: {
-    extend: {
-      backgroundColor: ["odd", "active"],
-      boxShadow: ["active"],
     },
   },
   plugins: [require("@tailwindcss/aspect-ratio")],
